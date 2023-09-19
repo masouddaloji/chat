@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+::-webkit-scrollbar {
+  width:5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a2a2a2;
+}
+
+@layer base {
+  @font-face {
+    font-family: "vazir";
+    src: url(../../public/fonts/Vazir.woff) format("woff"),
+      url(../../public/fonts/Vazir.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: "vazir-lig";
+    src: url(../../public/fonts/Vazir-Light.woff) format("woff"),
+      url(../../public/fonts/Vazir-Light.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: "vazir-med";
+    src: url(../../public/fonts/Vazir-Medium.woff) format("woff"),
+      url(../../public/fonts/Vazir-Medium.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: "vazir-bold";
+    src: url(../../public/fonts/Vazir-Bold.woff) format("woff"),
+      url(../../public/fonts/Vazir-Bold.woff2) format("woff2");
+  }
+}
+@layer components {
+  .rtl {
+    direction: rtl;
+  }
+  .heartAnimation {
+    animation: heartanim 5s infinite;
+  }
+  .cloudanimation-1 {
+    animation: cloudanim 60s linear infinite;
+  }
+  .cloudanimation-2 {
+    animation: cloudanim 90s linear infinite;
+  }
+  .cloudanimation-3 {
+    animation: cloudanim 80s linear infinite;
+  }
+  .cloudanimation-4 {
+    animation: cloudanim 80s linear infinite;
+  }
+  .circle {
+    background-image: linear-gradient(#cde7fa, #f1f8fe, #f1f8fe);
+    border-radius: 50%;
+  }
+  .main_circle {
+    width: calc(100px + (680 - 100) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(100px + (680 - 100) * ((100vw - 320px) / (1920 - 320)));
+  }
+  .small_circle {
+    width: calc(75px + (140 - 75) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(75px + (140 - 75) * ((100vw - 320px) / (1920 - 320)));
+  }
+  .movecircle {
+    @apply w-5 h-5 rounded-full border-[3px] border-[#d0eafb] absolute z-10;
+  }
+  .circle-animation {
+    animation: movedanim 50s infinite linear;
+  }
+  .form-group {
+    @apply w-full mb-5;
+  }
+  .input {
+    @apply w-full text-[#464a4c] bg-white rounded-md px-5 py-3 bg-clip-padding border border-input-border outline-none leading-5 text-sm;
+  }
+  .line::before,
+  .line::after {
+    display: inline-block;
+    content: "";
+    border-top: 1px solid #ededed;
+    width: 4.5rem;
+    margin: 0 1rem;
+  }
+  .iconBox {
+    @apply w-8 h-8  md:w-11 md:h-11 rounded-full flex items-center justify-center cursor-pointer;
+  }
+  .navIcon{
+    @apply w-8 h-8  rounded-full flex items-center justify-center cursor-pointer;
+  }
+  .navbarItem {
+    @apply flex items-center justify-start gap-3 text-black-primary dark:text-white;
+  }
+  .navItem__circle {
+    @apply w-11 h-11 rounded-full bg-blue-400;
+  }
+  .message__box::-webkit-scrollbar {
+    display: none;
+  }
+  .message__text {
+    @apply bg-[#1c9dea] text-white px-2.5 md:px-5 py-4 w-fit
+  }
+  .message__text:first-child {
+    border-radius: 30px 25px 0 30px;
+  }
+  .message__text:last-child {
+    border-radius: 30px 0 25px 30px;
+  }
+  .message__text--resive {
+    @apply bg-[#e5edf5] text-[#223645] dark:bg-black-dark dark:text-white px-2.5 md:px-5 py-4 w-fit
+  }
+  .message__text--resive:first-child {
+    border-radius: 30px 25px 25px 0;
+  }
+  .message__text--resive:last-child {
+    border-radius: 0 25px 25px 30px;
+  }
+  .contact__icon{
+    @apply scale-x-[-1] text-black-primary dark:text-white text-lg md:text-xl
+  }
+}
+/* animations  */
+@keyframes heartanim {
+  0% {
+    transform: scale(0.75);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.75);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(0.75);
+  }
+}
+@keyframes cloudanim {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(1000px);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}
+@keyframes movedanim {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    transform: translate(73px, -1px) rotate(36deg);
+  }
+  40% {
+    transform: translate(141px, 72px) rotate(72deg);
+  }
+  60% {
+    transform: translate(83px, 122px) rotate(108deg);
+  }
+  80% {
+    transform: translate(-40px, 72px) rotate(144deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
