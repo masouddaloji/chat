@@ -25,6 +25,10 @@ const config: Config = {
         "green-primary":"#3fcc35",
         "black-dark":"#191b1f",
         "icon-dark":"#25262c"
+      },
+      boxShadow:{
+        "img-dark-shadow":"0 0 0 0.5rem #25262c",
+        "img-light-shadow":"0 0 0 0.5rem #eff7fe",
       }
     },
   },

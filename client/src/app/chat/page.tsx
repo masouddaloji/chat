@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 //components
 import Chat from "@/components/Chat"
-import NavbarChat from "@/components/NavbarChat"
+import Sidebar from "@/components/Sidebar"
 import SendMassage from "@/components/SendMassage"
 import ContactDetails from "@/components/ContactDetails"
 
@@ -18,8 +18,8 @@ const ChatPage = () => {
 
   return (
     <section className="flex">
-      <NavbarChat width={width} isShowNavbar={isShowNavbar} setIsShowNavbar={setIsShowNavbar} />
-      <div className="bg-bg-main dark:bg-icon-dark h-screen w-full flex flex-col lg:w-[calc(100%-15rem)] z-10 ">
+      <Sidebar width={width} isShowNavbar={isShowNavbar} setIsShowNavbar={setIsShowNavbar} />
+      <div className="bg-bg-main dark:bg-icon-dark h-screen w-full flex flex-col lg:w-[calc(100%-400px)] z-10 ">
         <div className="flex flex-col h-[calc(100vh-60px)] md:h-[calc(100vh-96px)] w-full pt-10 px-4 lg:px-10">
           <ContactDetails width={width} setIsShowNavbar={setIsShowNavbar} />
           <Chat />

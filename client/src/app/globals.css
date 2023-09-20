@@ -103,7 +103,10 @@
     @apply w-8 h-8  rounded-full flex items-center justify-center cursor-pointer;
   }
   .navbarItem {
-    @apply flex items-center justify-start gap-3 text-black-primary dark:text-white;
+    @apply flex items-center justify-start gap-3 text-black-primary dark:text-white p-3;
+  }
+  .navbarItem:not(:last-child){
+    @apply border-b border-gray-primary
   }
   .navItem__circle {
     @apply w-11 h-11 rounded-full bg-blue-400;
@@ -112,22 +115,10 @@
     display: none;
   }
   .message__text {
-    @apply bg-[#1c9dea] text-white px-2.5 md:px-5 py-4 w-fit
-  }
-  .message__text:first-child {
-    border-radius: 30px 25px 0 30px;
-  }
-  .message__text:last-child {
-    border-radius: 30px 0 25px 30px;
+    @apply bg-[#1c9dea] text-white px-5 md:px-8 py-6  rounded-[20px];
   }
   .message__text--resive {
-    @apply bg-[#e5edf5] text-[#223645] dark:bg-black-dark dark:text-white px-2.5 md:px-5 py-4 w-fit
-  }
-  .message__text--resive:first-child {
-    border-radius: 30px 25px 25px 0;
-  }
-  .message__text--resive:last-child {
-    border-radius: 0 25px 25px 30px;
+    @apply bg-[#e5edf5] text-[#223645] dark:bg-black-dark dark:text-white px-5 md:px-8 py-6 rounded-[20px];
   }
   .contact__icon{
     @apply scale-x-[-1] text-black-primary dark:text-white text-lg md:text-xl

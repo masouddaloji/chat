@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <h1 className=''>صفحه اصلی</h1>
-      <Link href="/chat"><h2>چت</h2></Link>
+      <Link href="/chat"> چت </Link>
     </>
   )
 }
