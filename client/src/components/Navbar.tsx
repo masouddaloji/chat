@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 //icons
 import { BsMoon, BsSun } from "react-icons/bs"
 import { FaRegUserCircle } from "react-icons/fa"
@@ -35,7 +35,10 @@ const links = [
 ]
 
 const Navbar = ({ theme, setTheme }: NavbarProps) => {
-    const pathname=usePathname()    
+    const pathname=usePathname()  
+    const router = useRouter()
+
+      
     return (
         <nav className="w-full h-[60px] lg:h-auto lg:w-[70px] flex flex-col lg:items-center py-2.5 px-5 lg:px-0 bg-blue-primary order-2 lg:order-1">
             <Image src="/images/logo.png" alt="small logo chat" width={42} height={42} className="hidden lg:block"/>

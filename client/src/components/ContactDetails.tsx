@@ -7,10 +7,10 @@ import { IoCallSharp } from "react-icons/io5"
 
 type ContactDetailsProps = {
     width: number
-    setIsShowNavbar: React.Dispatch<React.SetStateAction<boolean>>
+    setIsShowUsers: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const ContactDetails = ({ width, setIsShowNavbar }: ContactDetailsProps) => {
+const ContactDetails = ({ width, setIsShowUsers }: ContactDetailsProps) => {
     return (
         <section className="px-2.5 py-2.5 lg:px-7 lg:py-5 bg-white dark:bg-black-dark shadow-sm">
             <div className="flex justify-between">
@@ -32,7 +32,7 @@ const ContactDetails = ({ width, setIsShowNavbar }: ContactDetailsProps) => {
                         <BiSearch className="text-black-primary dark:text-white text-lg md:text-xl" />
                     </div> }
                     
-                    {width < 1024 && <div className="iconBox bg-silver-primary dark:bg-icon-dark mr-4" onClick={() => setIsShowNavbar(true)}>
+                    {width < 1024 && <div className="iconBox bg-silver-primary dark:bg-icon-dark mr-4" onClick={() => setIsShowUsers(true)}>
                         <HiChevronRight className="text-black-primary dark:text-white" />
                     </div>}
                 </div>

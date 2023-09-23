@@ -20,7 +20,7 @@ const MessageChat = ({ response }: res) => {
                 <div className="flex flex-col flex-1">
                     {/* message header */}
                     <div className={`flex gap-5 ${response ? "flex-row" : "flex-row-reverse "}`}>
-                        <h5 className="pr-5 text-sm text-black-primary font-bold dark:text-white">سعید مظفری</h5>
+                        <h5 className="pr-5 text-[13px] text-black-primary font-bold dark:text-white">سعید مظفری</h5>
                         <h6 className="text-xs text text-gray-primary font-normal dark:text-white">01:35 صبح</h6>
                     </div>
                     {/* start message */}

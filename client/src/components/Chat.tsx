@@ -4,7 +4,7 @@ import MessageChat from "./MessageChat"
 
 const Chat = () => {
   return (
-    <div className="message__box h-full w-full py-8 overflow-y-auto overflow-x-hidden">
+    <div className="message__box py-8 overflow-y-auto overflow-x-hidden">
       <ul className="flex flex-col space-y-5">
         <MessageChat response={false} />
         <MessageChat response={true} />
